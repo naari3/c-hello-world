@@ -1,7 +1,7 @@
 [hello.c](hello.c)
 
 ```bash
-cc -static -Wl,--omagic hello.c -o hello
+cc hello.c -o hello
 ```
 
 ```
@@ -11,9 +11,9 @@ cc -static -Wl,--omagic hello.c -o hello
   4bce67:       48 c7 c7 01 00 00 00    mov    rdi,0x1
   4bce6e:       48 8d 35 13 00 00 00    lea    rsi,[rip+0x13]        # 4bce88 <msg>
   4bce75:       48 c7 c2 0d 00 00 00    mov    rdx,0xd
-  4bce7c:       0f 05                   syscall 
+  4bce7c:       0f 05                   syscall
   4bce7e:       48 c7 c0 00 00 00 00    mov    rax,0x0
-  4bce85:       c3                      ret    
+  4bce85:       c3                      ret
         ...
 
 00000000004bce88 <msg>:
